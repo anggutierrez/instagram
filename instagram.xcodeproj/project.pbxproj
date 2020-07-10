@@ -13,6 +13,8 @@
 		AC2DF0F924B77C770023765B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2DF0F824B77C770023765B /* Launch Screen.storyboard */; };
 		AC2DF0FF24B77EFC0023765B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF0FE24B77EFC0023765B /* LoginViewController.m */; };
 		AC2DF10224B7D34F0023765B /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF10124B7D34F0023765B /* TimelineViewController.m */; };
+		AC2DF11724B8EC190023765B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11624B8EC180023765B /* Post.m */; };
+		AC2DF11A24B8EC3E0023765B /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11924B8EC3E0023765B /* PostCell.m */; };
 		ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E424B66A690082E427 /* AppDelegate.m */; };
 		ACDB05E824B66A690082E427 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E724B66A690082E427 /* SceneDelegate.m */; };
 		ACDB05EB24B66A690082E427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05EA24B66A690082E427 /* ViewController.m */; };
@@ -52,6 +54,10 @@
 		AC2DF0FE24B77EFC0023765B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AC2DF10024B7D34F0023765B /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		AC2DF10124B7D34F0023765B /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
+		AC2DF11524B8EC180023765B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Post.h; path = ../../../../Documents/Post.h; sourceTree = "<group>"; };
+		AC2DF11624B8EC180023765B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = ../../../../Documents/Post.m; sourceTree = "<group>"; };
+		AC2DF11824B8EC3E0023765B /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PostCell.h; path = ../../../../Documents/PostCell.h; sourceTree = "<group>"; };
+		AC2DF11924B8EC3E0023765B /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PostCell.m; path = ../../../../Documents/PostCell.m; sourceTree = "<group>"; };
 		ACDB05E024B66A690082E427 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB05E324B66A690082E427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACDB05E424B66A690082E427 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -120,6 +126,8 @@
 		AC2DF0FA24B77E820023765B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AC2DF11824B8EC3E0023765B /* PostCell.h */,
+				AC2DF11924B8EC3E0023765B /* PostCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -138,6 +146,8 @@
 		AC2DF0FC24B77EAB0023765B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				AC2DF11524B8EC180023765B /* Post.h */,
+				AC2DF11624B8EC180023765B /* Post.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -170,8 +180,8 @@
 				AC2DF0FC24B77EAB0023765B /* Models */,
 				AC2DF0FB24B77EA30023765B /* View Controllers */,
 				AC2DF0FA24B77E820023765B /* Views */,
-				ACDB05E324B66A690082E427 /* AppDelegate.h */,
 				AC2DF0F824B77C770023765B /* Launch Screen.storyboard */,
+				ACDB05E324B66A690082E427 /* AppDelegate.h */,
 				ACDB05E424B66A690082E427 /* AppDelegate.m */,
 				ACDB05E624B66A690082E427 /* SceneDelegate.h */,
 				ACDB05E724B66A690082E427 /* SceneDelegate.m */,
@@ -456,9 +466,11 @@
 				ACDB05EB24B66A690082E427 /* ViewController.m in Sources */,
 				ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */,
 				ACDB05F624B66A6A0082E427 /* main.m in Sources */,
+				AC2DF11A24B8EC3E0023765B /* PostCell.m in Sources */,
 				ACDB05E824B66A690082E427 /* SceneDelegate.m in Sources */,
 				AC2DF0FF24B77EFC0023765B /* LoginViewController.m in Sources */,
 				AC2DF10224B7D34F0023765B /* TimelineViewController.m in Sources */,
+				AC2DF11724B8EC190023765B /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

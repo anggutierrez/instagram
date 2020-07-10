@@ -100,7 +100,7 @@
                     <navigationItem key="navigationItem" id="MWd-by-YFa">
                         <barButtonItem key="leftBarButtonItem" title="Logout" id="pRV-fy-aJ9">
                             <connections>
-                                <action selector="didTapLogout:" destination="wOO-wU-9sg" id="3xR-7x-MG3"/>
+                                <action selector="didTapLogout:" destination="wOO-wU-9sg" id="jaH-vN-orF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
