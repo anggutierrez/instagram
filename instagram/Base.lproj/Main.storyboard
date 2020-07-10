@@ -15,18 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-jy-UDR">
-                                <rect key="frame" x="83" y="786" width="248" height="76"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="didTapRegister:" destination="fwE-ii-obO" eventType="touchUpInside" id="hJN-bw-zj4"/>
-                                    <action selector="didTapRegister:" destination="y7J-Z5-w0Y" eventType="touchUpInside" id="nki-5c-ToE"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7ab-5r-ndJ">
                                 <rect key="frame" x="20" y="136" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -63,6 +51,18 @@
                                 <connections>
                                     <action selector="didTapLogin:" destination="y7J-Z5-w0Y" eventType="touchUpInside" id="PcW-vL-gpT"/>
                                     <action selector="didTapRegister:" destination="fwE-ii-obO" eventType="touchUpInside" id="maz-xO-0zq"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ivM-jy-UDR">
+                                <rect key="frame" x="83" y="540" width="248" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRegister:" destination="fwE-ii-obO" eventType="touchUpInside" id="hJN-bw-zj4"/>
+                                    <action selector="didTapRegister:" destination="y7J-Z5-w0Y" eventType="touchUpInside" id="nki-5c-ToE"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -103,6 +103,11 @@
                                 <action selector="didTapLogout:" destination="wOO-wU-9sg" id="jaH-vN-orF"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Compose" id="Bid-ge-OjY">
+                            <connections>
+                                <segue destination="TBT-gZ-WCz" kind="presentation" id="3sJ-J3-VoY"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="oyO-yI-3qu" id="jbT-sY-Cth"/>
@@ -111,6 +116,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gIE-cX-0vg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1882.608695652174" y="-750"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="bg7-w8-yAd">
+            <objects>
+                <viewController id="MQf-YW-39X" customClass="ComposeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afw-at-1Ng">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uKl-dz-Rkv">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAg-rd-6dM">
+                                        <rect key="frame" x="8" y="8" width="180" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <gestureRecognizers/>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Write a caption!" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="fHQ-6r-8pt">
+                                        <rect key="frame" x="208" y="8" width="188" height="180"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zgq-CA-x5s">
+                                        <rect key="frame" x="62" y="196" width="72" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Add Photo"/>
+                                        <connections>
+                                            <action selector="onTapImage:" destination="MQf-YW-39X" eventType="touchUpInside" id="Q2P-64-hq4"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <viewLayoutGuide key="contentLayoutGuide" id="lgX-La-Ond"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="DNZ-KL-VmG"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="yoe-se-cPk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="65T-dn-bwo">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="J8P-DW-4Dy">
+                            <connections>
+                                <action selector="onTapCancel:" destination="MQf-YW-39X" id="5hb-CM-6oU"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Post" id="pw8-QX-wBJ">
+                            <connections>
+                                <action selector="onTapPost:" destination="MQf-YW-39X" id="aHp-zm-ZCM"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="composeTextView" destination="fHQ-6r-8pt" id="LBy-WG-njM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eqD-KH-hxW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3400.0000000000005" y="-750"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="uAQ-hh-AGT">
@@ -129,6 +196,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LMe-Gi-DOE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1105.7971014492755" y="-750"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="o4d-Uh-Ylr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TBT-gZ-WCz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Izc-GP-bbn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MQf-YW-39X" kind="relationship" relationship="rootViewController" id="Ze0-cw-Az4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BKa-zK-6nK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2659" y="-750"/>
         </scene>
     </scenes>
 </document>

@@ -24,10 +24,11 @@
     [super viewDidLoad];
 
 	// Tableview and Delegate init here
-
     self.refreshControl = [[UIRefreshControl alloc] init];
 	[self.refreshControl addTarget:self action:@selector(fetchPosts) forControlEvents:UIControlEventValueChanged];
 	[self.tableView insertSubview:self.refreshControl atIndex:0];
+	
+	[self fetchPosts];
 }
 
 - (void)fetchPosts {
@@ -43,6 +44,7 @@
 		} else {
 			NSLog(@"%@", error.localizedDescription);
 		}
+		[self.refreshControl endRefreshing];
 	}];
 }
 
@@ -57,7 +59,7 @@
 	
 	sceneDelegate.window.rootViewController = loginViewController;
 	
-	[PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error){}];
+	[PFUser logOutInBackgroundWithBlock:^(NSError * _Nullable error) {}];
 }
 
 

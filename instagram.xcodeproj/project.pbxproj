@@ -13,8 +13,8 @@
 		AC2DF0F924B77C770023765B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC2DF0F824B77C770023765B /* Launch Screen.storyboard */; };
 		AC2DF0FF24B77EFC0023765B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF0FE24B77EFC0023765B /* LoginViewController.m */; };
 		AC2DF10224B7D34F0023765B /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF10124B7D34F0023765B /* TimelineViewController.m */; };
-		AC2DF11724B8EC190023765B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11624B8EC180023765B /* Post.m */; };
-		AC2DF11A24B8EC3E0023765B /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11924B8EC3E0023765B /* PostCell.m */; };
+		AC2DF12024B909E90023765B /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11F24B909E90023765B /* ComposeViewController.m */; };
+		AC2DF12524B90EFA0023765B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF12424B90EFA0023765B /* Post.m */; };
 		ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E424B66A690082E427 /* AppDelegate.m */; };
 		ACDB05E824B66A690082E427 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E724B66A690082E427 /* SceneDelegate.m */; };
 		ACDB05EB24B66A690082E427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05EA24B66A690082E427 /* ViewController.m */; };
@@ -54,10 +54,10 @@
 		AC2DF0FE24B77EFC0023765B /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		AC2DF10024B7D34F0023765B /* TimelineViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimelineViewController.h; sourceTree = "<group>"; };
 		AC2DF10124B7D34F0023765B /* TimelineViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimelineViewController.m; sourceTree = "<group>"; };
-		AC2DF11524B8EC180023765B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Post.h; path = ../../../../Documents/Post.h; sourceTree = "<group>"; };
-		AC2DF11624B8EC180023765B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = ../../../../Documents/Post.m; sourceTree = "<group>"; };
-		AC2DF11824B8EC3E0023765B /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PostCell.h; path = ../../../../Documents/PostCell.h; sourceTree = "<group>"; };
-		AC2DF11924B8EC3E0023765B /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PostCell.m; path = ../../../../Documents/PostCell.m; sourceTree = "<group>"; };
+		AC2DF11E24B909E90023765B /* ComposeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ComposeViewController.h; sourceTree = "<group>"; };
+		AC2DF11F24B909E90023765B /* ComposeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ComposeViewController.m; sourceTree = "<group>"; };
+		AC2DF12324B90EFA0023765B /* Post.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Post.h; sourceTree = "<group>"; };
+		AC2DF12424B90EFA0023765B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		ACDB05E024B66A690082E427 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB05E324B66A690082E427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACDB05E424B66A690082E427 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -123,15 +123,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		AC2DF0FA24B77E820023765B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				AC2DF11824B8EC3E0023765B /* PostCell.h */,
-				AC2DF11924B8EC3E0023765B /* PostCell.m */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		AC2DF0FB24B77EA30023765B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,17 +130,26 @@
 				AC2DF0FE24B77EFC0023765B /* LoginViewController.m */,
 				AC2DF10024B7D34F0023765B /* TimelineViewController.h */,
 				AC2DF10124B7D34F0023765B /* TimelineViewController.m */,
+				AC2DF11E24B909E90023765B /* ComposeViewController.h */,
+				AC2DF11F24B909E90023765B /* ComposeViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		AC2DF0FC24B77EAB0023765B /* Models */ = {
+		AC2DF12124B90EDC0023765B /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				AC2DF11524B8EC180023765B /* Post.h */,
-				AC2DF11624B8EC180023765B /* Post.m */,
+				AC2DF12324B90EFA0023765B /* Post.h */,
+				AC2DF12424B90EFA0023765B /* Post.m */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		AC2DF12224B90EE20023765B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		ACDB05D724B66A690082E427 = {
@@ -177,19 +177,19 @@
 		ACDB05E224B66A690082E427 /* instagram */ = {
 			isa = PBXGroup;
 			children = (
-				AC2DF0FC24B77EAB0023765B /* Models */,
 				AC2DF0FB24B77EA30023765B /* View Controllers */,
-				AC2DF0FA24B77E820023765B /* Views */,
+				AC2DF12224B90EE20023765B /* Views */,
+				AC2DF12124B90EDC0023765B /* Models */,
+				ACDB05EC24B66A690082E427 /* Main.storyboard */,
 				AC2DF0F824B77C770023765B /* Launch Screen.storyboard */,
+				ACDB05F124B66A6A0082E427 /* LaunchScreen.storyboard */,
 				ACDB05E324B66A690082E427 /* AppDelegate.h */,
 				ACDB05E424B66A690082E427 /* AppDelegate.m */,
 				ACDB05E624B66A690082E427 /* SceneDelegate.h */,
 				ACDB05E724B66A690082E427 /* SceneDelegate.m */,
 				ACDB05E924B66A690082E427 /* ViewController.h */,
 				ACDB05EA24B66A690082E427 /* ViewController.m */,
-				ACDB05EC24B66A690082E427 /* Main.storyboard */,
 				ACDB05EF24B66A6A0082E427 /* Assets.xcassets */,
-				ACDB05F124B66A6A0082E427 /* LaunchScreen.storyboard */,
 				ACDB05F424B66A6A0082E427 /* Info.plist */,
 				ACDB05F524B66A6A0082E427 /* main.m */,
 			);
@@ -466,11 +466,11 @@
 				ACDB05EB24B66A690082E427 /* ViewController.m in Sources */,
 				ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */,
 				ACDB05F624B66A6A0082E427 /* main.m in Sources */,
-				AC2DF11A24B8EC3E0023765B /* PostCell.m in Sources */,
+				AC2DF12024B909E90023765B /* ComposeViewController.m in Sources */,
 				ACDB05E824B66A690082E427 /* SceneDelegate.m in Sources */,
 				AC2DF0FF24B77EFC0023765B /* LoginViewController.m in Sources */,
 				AC2DF10224B7D34F0023765B /* TimelineViewController.m in Sources */,
-				AC2DF11724B8EC190023765B /* Post.m in Sources */,
+				AC2DF12524B90EFA0023765B /* Post.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
