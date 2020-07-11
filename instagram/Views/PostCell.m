@@ -18,6 +18,9 @@
 - (void)setPost:(Post *)post {
     _post = post;
 	self.photoImageView.file = post[@"image"];
+	 // Set other vars / UI elements here
+	self.captionLabel.text = post[@"caption"];
+	
 	[self.photoImageView loadInBackground];
 }
 

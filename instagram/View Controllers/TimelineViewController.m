@@ -8,10 +8,13 @@
 
 #import "TimelineViewController.h"
 #import "LoginViewController.h"
+#import "DetailsViewController.h"
+#import "PostCell.h"
+#import "Post.h"
 #import "SceneDelegate.h"
 #import "Parse/Parse.h"
 
-@interface TimelineViewController ()
+@interface TimelineViewController () <UITableViewDelegate, UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) NSMutableArray *posts;
 @property (nonatomic, strong) UIRefreshControl *refreshControl;
@@ -23,7 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-	// Tableview and Delegate init here
+	self.tableView.delegate = self;
+	self.tableView.dataSource = self;
+	self.tableView.rowHeight = 450;
+	
     self.refreshControl = [[UIRefreshControl alloc] init];
 	[self.refreshControl addTarget:self action:@selector(fetchPosts) forControlEvents:UIControlEventValueChanged];
 	[self.tableView insertSubview:self.refreshControl atIndex:0];
@@ -33,6 +39,7 @@
 
 - (void)fetchPosts {
 	PFQuery *query = [PFQuery queryWithClassName:@"Post"];
+	[query orderByDescending: @"createdAt"];
 	query.limit = 20;
 	
 	[query findObjectsInBackgroundWithBlock:^(NSArray *posts, NSError *error) {
@@ -63,22 +70,33 @@
 }
 
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+	if ([segue.identifier isEqual:@"detailsViewController"]) {
+		UITableViewCell *tappedCell = sender;
+		NSIndexPath *indexPath = [self.tableView indexPathForCell:tappedCell];
+		Post *post = self.posts[indexPath.row];
+		
+		DetailsViewController *detailsViewController = [segue destinationViewController];
+		detailsViewController.post = post;
+	}
 }
-*/
 
-/*
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+	PostCell *cell = [tableView dequeueReusableCellWithIdentifier:@"PostCell" forIndexPath:indexPath];
+	
+	Post *post = self.posts[indexPath.row];
+	cell.post = post;
+	
+	// cell.authourLabel.text = post.author;
+	
+	return cell;
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+	return self.posts.count;
 }
- */
 
 @end

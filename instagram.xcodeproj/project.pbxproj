@@ -16,6 +16,7 @@
 		AC2DF12024B909E90023765B /* ComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF11F24B909E90023765B /* ComposeViewController.m */; };
 		AC2DF12524B90EFA0023765B /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF12424B90EFA0023765B /* Post.m */; };
 		AC2DF12824B928240023765B /* PostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF12724B928240023765B /* PostCell.m */; };
+		AC2DF12B24B930E70023765B /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC2DF12A24B930E70023765B /* DetailsViewController.m */; };
 		ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E424B66A690082E427 /* AppDelegate.m */; };
 		ACDB05E824B66A690082E427 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05E724B66A690082E427 /* SceneDelegate.m */; };
 		ACDB05EB24B66A690082E427 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACDB05EA24B66A690082E427 /* ViewController.m */; };
@@ -61,6 +62,8 @@
 		AC2DF12424B90EFA0023765B /* Post.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Post.m; sourceTree = "<group>"; };
 		AC2DF12624B928240023765B /* PostCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PostCell.h; sourceTree = "<group>"; };
 		AC2DF12724B928240023765B /* PostCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PostCell.m; sourceTree = "<group>"; };
+		AC2DF12924B930E70023765B /* DetailsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		AC2DF12A24B930E70023765B /* DetailsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		ACDB05E024B66A690082E427 /* instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDB05E324B66A690082E427 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ACDB05E424B66A690082E427 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				AC2DF10124B7D34F0023765B /* TimelineViewController.m */,
 				AC2DF11E24B909E90023765B /* ComposeViewController.h */,
 				AC2DF11F24B909E90023765B /* ComposeViewController.m */,
+				AC2DF12924B930E70023765B /* DetailsViewController.h */,
+				AC2DF12A24B930E70023765B /* DetailsViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACDB05EB24B66A690082E427 /* ViewController.m in Sources */,
+				AC2DF12B24B930E70023765B /* DetailsViewController.m in Sources */,
 				ACDB05E524B66A690082E427 /* AppDelegate.m in Sources */,
 				ACDB05F624B66A6A0082E427 /* main.m in Sources */,
 				AC2DF12024B909E90023765B /* ComposeViewController.m in Sources */,
